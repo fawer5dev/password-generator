@@ -1,0 +1,10 @@
+# password-generator
+This code is a JavaScript file that generates random passwords based on user preferences, and provides an option to copy the password to the user's clipboard.
+
+The code starts by selecting the necessary DOM elements and storing them in variables for later use. Then, an object called randomFunc is defined with four properties: lower, upper, number, and symbol. Each property is assigned a reference to a function that generates a random lowercase letter, uppercase letter, number, or symbol, respectively.
+
+Next, event listeners are added to the clipboardEl and generateEl elements. The clipboardEl event listener triggers when the user clicks on the "Copy to clipboard" button. It checks if there is a password displayed in the resultEl element and if so, copies the password to the user's clipboard and displays an alert confirming the action. The generateEl event listener triggers when the user clicks on the "Generate password" button. It retrieves the user's preferences for password length, and whether to include lowercase letters, uppercase letters, numbers, and symbols. It then calls the generatePassword() function to generate a password based on these preferences, and displays the password in the resultEl element.
+
+The generatePassword() function takes in the user's preferences and the desired password length as parameters. It first checks how many types of characters (lowercase letters, uppercase letters, numbers, and symbols) are selected by the user, and creates an array typesArr that contains only the types that are selected. If no types are selected, the function returns an empty string. The function then generates random characters for each selected type, and repeats this process until the desired password length is reached. The generated password is then trimmed to the desired length and returned.
+
+Finally, the getRandomLower(), getRandomUpper(), getRandomNumber(), and getRandomSymbol() functions are defined. These functions generate a random character from their respective character sets (lowercase letters, uppercase letters, numbers, and symbols).
