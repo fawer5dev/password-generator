@@ -1,48 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Password Generator</title>
-  </head>
-  <body>
-    <div class="container">
-      <h2>Password Generator</h2>
-      <div class="result-container">
-        <span id="result"></span>
-        <button class="btn" id="clipboard">
-          <i class="far fa-clipboard"></i>
-        </button>
-      </div>
-      <div class="settings">
-        <div class="setting">
-          <label>Password Length</label>
-          <input type="number" id="length" min="4" max="20" value="20">
-        </div>
-        <div class="setting">
-          <label>Include uppercase letters</label>
-          <input type="checkbox" id="uppercase" checked>
-        </div>
-        <div class="setting">
-          <label>Include lowercase letters</label>
-          <input type="checkbox" id="lowercase" checked>
-        </div>
-        <div class="setting">
-          <label>Include numbers</label>
-          <input type="checkbox" id="numbers" checked>
-        </div>
-        <div class="setting">
-          <label>Include symbols</label>
-          <input type="checkbox" id="symbols" checked>
-        </div>
-      </div>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="This code is a JavaScript file that generates random passwords">
+        <title>Password Generator</title>
+        <link href="https://fonts.googleapis.com/css?family=Nunito:400,300" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-md-12">
+                <form>
+                    <h1>Password Generator</h1>
+                    <fieldset>
+                        <label for="length">Password Length:</label>
+                        <input type="number" id="length" min="4" max="20" value="20">
+                        
+                        <label>Options:</label>
+                        <input type="checkbox" id="uppercase" checked>
+                        <label class="light" for="uppercase">Include uppercase letters</label><br>
+                        
+                        <input type="checkbox" id="lowercase" checked>
+                        <label class="light" for="lowercase">Include lowercase letters</label><br>
+                        
+                        <input type="checkbox" id="numbers" checked>
+                        <label class="light" for="numbers">Include numbers</label><br>
 
-      <button class="btn btn-large" id="generate">
-        Generate Password
-      </button>
-    </div>
-    <script src="script.js"></script>
-  </body>
+                        <input type="checkbox" id="symbols" checked>
+                        <label class="light" for="symbols">Include symbols</label>
+
+                        <button type="button" class="btn btn-large" id="generate">Generate Password</button>
+                    </fieldset>
+                    <div class="result-container">
+                        <span id="result"></span>
+                        <button type="button" class="btn" id="clipboard">
+                          <i class="fa fa-copy">Copy &#128203;</i>
+                        </button>
+                    </div><br>
+                    <label class="light"> Made by  
+                    <a class="font-bold" href="https://github.com/fawer5dev">Fawer Vargas</a></label></br>
+                    <label class="light">Powered by 
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></label>
+                </form>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>

@@ -1,50 +1,53 @@
-/* Importing Google Font */
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-
 /* Setting box-sizing property for all elements */
-* {
+*, *:before, *:after {
   box-sizing: border-box;
 }
 
 /* Styling the body element */
 body {
-  background-color: #ccd4e2;
-  color: #fff;
-  font-family: 'Muli', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  padding: 10px;
-  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  color: #384047;
 }
 
-/* Styling the h2 element */
-h2 {
-  margin: 10px 0 20px;
+form {
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+}
+
+/* Styling the h1 element */
+h1 {
+  margin: 0 0 30px 0;
   text-align: center;
 }
 
-/* Styling the container class */
-.container {
-  background-color: #eb5c74;
-  box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
-  padding: 20px;
-  width: 350px;
-  max-width: 100%;
+input[type="number"],
+input[type="checkbox"] {
+  margin-bottom: 30px;
+}
+
+input[type="checkbox"] {
+  margin: 0 4px 8px 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+label.light {
+  font-weight: 300;
+  display: inline;
 }
 
 /* Styling the result-container class */
 .result-container {
   background-color: rgba(0, 0, 0, 0.4);
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  position: relative;
   font-size: 18px;
-  letter-spacing: 1px;
   padding: 12px 10px;
   height: 50px;
   width: 100%;
@@ -58,13 +61,12 @@ h2 {
   height: 100%;
 }
 
-/* Styling the scrollbar of #result ID inside the result-container class */
-#result::-webkit-scrollbar {
+.result-container #result::-webkit-scrollbar {
   width: 1rem;
 }
 
 /* Styling the btn class inside the result-container class */
-.result-container .btn {
+.result-container.btn {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -76,7 +78,7 @@ h2 {
 /* Styling the btn class */
 .btn {
   border: none;
-  background-color: #47030e;
+  background-color: #4bc970;
   color: #fff;
   font-size: 16px;
   padding: 8px 12px;
@@ -89,10 +91,13 @@ h2 {
   width: 100%;
 }
 
-/* Styling the setting class */
-.setting {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 15px 0;
+fieldset {
+  margin-bottom: 30px;
+  border: none;
+}
+
+@media screen and (min-width: 480px) {
+  form {
+    max-width: 480px;
+  }
 }
